@@ -3,16 +3,10 @@
 # @Author : cniu6 (zerohh)
 # @GitHub : https://github.com/cniu6/douyinpaging
 
-
-import pynput
+from pynput import keyboard
 import time
 
-
-
-
-
-control = pynput.keyboard.Controller()
-mourol = pynput.mouse.Controller()
+control = keyboard.Controller()
 
 
 def on_press(key):
@@ -35,34 +29,34 @@ def on_release(key):
     
 
         # 如果监听是 page_up 就
-    if key == pynput.keyboard.Key.page_up:
+    if key == keyboard.Key.page_up:
             time.sleep(0.5)
-            control.press(pynput.keyboard.Key.up)
+            control.press(keyboard.Key.up)
             time.sleep(0.01)
-            control.release(pynput.keyboard.Key.up)
+            control.release(keyboard.Key.up)
            
 
          # 如果监听是 page_down 就
-    if key == pynput.keyboard.Key.page_down:
+    if key == keyboard.Key.page_down:
             time.sleep(0.5)
-            control.press(pynput.keyboard.Key.down)
+            control.press(keyboard.Key.down)
             time.sleep(0.01)
-            control.release(pynput.keyboard.Key.down)
+            control.release(keyboard.Key.down)
             
 
 
     # 如果监听是 "b" 就 在 0.2s内按下 alt+f3  快速关闭当前页面。  并且输出False退出程序。
-    if key == pynput.keyboard.KeyCode.from_char('b') or key == pynput.keyboard.KeyCode.from_char('B'):
-            control.press(pynput.keyboard.Key.alt_l)
-            control.press(pynput.keyboard.KeyCode.from_vk(115))
+    if key == keyboard.KeyCode.from_char('b') or key == keyboard.KeyCode.from_char('B'):
+            control.press(keyboard.Key.alt_l)
+            control.press(keyboard.KeyCode.from_vk(115))
             time.sleep(0.1)
-            control.release(pynput.keyboard.Key.alt_l)
-            control.release(pynput.keyboard.KeyCode.from_vk(115))
+            control.release(keyboard.Key.alt_l)
+            control.release(keyboard.KeyCode.from_vk(115))
             # Stop listener 
             return False
 
 
-    if key == pynput.keyboard.Key.esc:
+    if key == keyboard.Key.esc:
         # Stop listener
         return False
 
@@ -84,7 +78,7 @@ print("       ")
 
 if __name__ == '__main__':
     # 监听keyboard
-    with pynput.keyboard.Listener(
+    with keyboard.Listener(
             on_press=on_press,
             on_release=on_release) as listener:
         listener.join()
