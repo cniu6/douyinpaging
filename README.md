@@ -38,19 +38,28 @@ Pyinstaller -F -i douyinfanyebiRes.ico main.py
 
 ## 原理
 
-翻页笔对电脑输入page_up/done键
+翻页笔对电脑输入page_up/page_done键
+
+
+- 翻页笔(page_up)    =>   程序模拟(up)
+- 翻页笔(page_down)  =>   程序模拟(down)
+- 翻页笔长按下键(B)   =>   程序模拟(Alt+F3 并 exit)
+
+
+
 让程序自动监听 并且自动模拟输入 up/done键
 从而用翻页笔也能滑动视频。
 
 翻页笔长按下键，一般绑定`<B>`键，使PPT黑屏，让注意力转移到讲师上来。
 那就让`<B>`绑定 输入 Alt+F3快速关闭网页。
 
-### 视频讲解
+## 视频讲解
 
+***
 `ing`
+***
 
-
-### 其他
+## 其他
 
 cx love from zerohhh LHH
 2天写的
