@@ -55,11 +55,11 @@ Pyinstaller -F -i douyinfanyebiRes.ico main.py
 
 ## 视频讲解
 
-***
-`
+
+
 <iframe src="//player.bilibili.com/player.html?aid=618592783&bvid=BV1ah4y1A7xp&cid=1269981680&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-`
-***
+
+
 
 ## 其他
 
