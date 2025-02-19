@@ -57,8 +57,7 @@ Pyinstaller -F -i douyinfanyebiRes.ico main.py
 
 
 
-<iframe src="//player.bilibili.com/player.html?aid=618592783&bvid=BV1ah4y1A7xp&cid=1269981680&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
+哔哩哔哩 [BV1ah4y1A7xp](https://www.bilibili.com/video/BV1ah4y1A7xp)
 
 
 ## 其他
